@@ -118,6 +118,7 @@ class TimedRandomDigitOTP(RandomDigitOTP):
 
         super().__init__(length = length, seed = seed)
         self.__time_limit = time_limit
+        self.__start = None
 
     @property
     def otp(self: TimedRandomDigitOTP) -> str:
@@ -140,7 +141,9 @@ class TimedRandomDigitOTP(RandomDigitOTP):
         '''
         # if too much time has passed since OTP was generated, OTP is no 
         # longer valid
-        if ((time() - self.__start) 
+        if self.__start is None:
+            return False
+        elif ((time() - self.__start) 
             / TimedRandomDigitOTP.__conversion_factor 
             >= self.__time_limit):
             return False
