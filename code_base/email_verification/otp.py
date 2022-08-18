@@ -3,21 +3,19 @@ from __future__ import annotations
 '''This module contains classes which generate OTPs.'''
 
 __author__ = 'Loh Zhi Shen'
-__verison__ = '1.0.0'
+__verison__ = '1.0.1'
 __last_updated__ = '18/08/2022'
 
 import random
 from time import time
-from abc import ABC, abstractmethod, abstractproperty
+from abc import ABC, abstractmethod
 
 class AbstractOTP(ABC):
     '''Abstract class for all one-time password(OTP) generator.
 
-    Attributes:
-        otp (str): OTP. 
-
     Args:
         seed (int, optional): Seed used to generate OTP.
+        kwargs (dict): optional keyword arguements.
 
     Notes:
         AbstractOTP does not implement otp property or verify() method
@@ -26,12 +24,15 @@ class AbstractOTP(ABC):
         if seed is not None:
             random.seed(seed)
 
-    @abstractproperty
-    def otp(self: AbstractOTP) -> str:
-        '''str: One-time password.
+    @abstractmethod
+    def generate(self: AbstractOTP) -> str:
+        '''Returns the generated OTP.
+
+        Returns:
+            str: One-time password.
 
         Notes:
-            This is a placeholder attribute intended to be 
+            This is a placeholder method intended to be 
             overwritten by individual generators.
         '''
         raise NotImplementedError
@@ -48,8 +49,8 @@ class AbstractOTP(ABC):
                 for valid, False otherwise.
 
         Notes:
-            This is a placeholder intended to be overwritten by 
-            individual generators.
+            This is a placeholder method intended to be 
+            overwritten by individual generators.
         '''
         raise NotImplementedError
 
@@ -71,9 +72,13 @@ class RandomDigitOTP(AbstractOTP):
         self.__length = length
         self.__otp = None
 
-    @property
-    def otp(self: AbstractOTP) -> str:
-        '''str: One-time password.'''
+    def generate(self: AbstractOTP) -> str:
+        '''Returns the generated OTP.
+
+        Returns:
+            str: One-time password.
+        '''
+
         otp = ''
         while len(otp) < self.__length:
             otp += str(random.randint(0, 9))
@@ -83,8 +88,6 @@ class RandomDigitOTP(AbstractOTP):
 
     def verify(self: AbstractOTP, otp: str) -> bool:
         '''Verifies a one-time password(OTP).
-        
-        A OTP is valid if and only if the OTP string is correct.
 
         Args:
             otp (str): The OTP to be verified.
@@ -93,44 +96,47 @@ class RandomDigitOTP(AbstractOTP):
             bool: A bool indicating whether the OTP is valid. 
                 True for valid, False otherwise.
         '''
+
+        # generate() not called beforehand
         if self.__otp is None:
             return False
-        elif otp == self.__otp:
-            return True
-        return False
+        # wrong OTP
+        elif otp != self.__otp:
+            return False
 
-class TimedRandomDigitOTP(RandomDigitOTP):
-    '''One-time password(OTP) generator where OTP consist of only digits 
-    and expires after the time limit.
+        return True
 
-    Attributes:
-        otp (str): OTP.
+class TimedOTP(AbstractOTP):
+    '''One-time password(OTP) generator wrapper which expires 
+    OTPs are certain amount of time.
 
     Args:
+        otp (AbstractOTP): OTP generator to be wrapped.
         time_limit (int): Time before OTP expires in minutes.
-        length (int): Length of the OTP.
-        seed (int, optional): Seed used to generate OTP.
     '''
-    __conversion_factor = 60
 
-    def __init__(self: TimedRandomDigitOTP, time_limit: int, 
-        length: int, seed: int | None = None, **kwargs: dict) -> None:
+    # number of seconds in a minute
+    __conversion_factor = 60 
 
-        super().__init__(length = length, seed = seed)
+    def __init__(self: TimedOTP, otp: AbstractOTP, time_limit: int, 
+        **kwargs: dict) -> None:
+
+        self.__otp = otp
         self.__time_limit = time_limit
         self.__start = None
 
-    @property
-    def otp(self: TimedRandomDigitOTP) -> str:
-        '''str: One-time password.'''
+    def generate(self: TimedOTP) -> str:
+        '''Returns the generated OTP.
+
+        Returns:
+            str: One-time password.
+        '''
+
         self.__start = time()
-        return super().otp
+        return self.__otp.generate()
 
-    def verify(self: TimedRandomDigitOTP, otp: str) -> bool:
+    def verify(self: TimedOTP, otp: str) -> bool:
         '''Verifies a one-time password(OTP).
-
-        A OTP is valid if and only if the OTP string is correct and the 
-        OTP has not expired.
         
         Args:
             otp (str): The OTP to be verified.
@@ -139,13 +145,14 @@ class TimedRandomDigitOTP(RandomDigitOTP):
             bool: A bool indicating whether the OTP is valid. 
                 True for valid, False otherwise.
         '''
-        # if too much time has passed since OTP was generated, OTP is no 
-        # longer valid
+
+        # generate not called beforehand
         if self.__start is None:
             return False
-        elif ((time() - self.__start) 
-            / TimedRandomDigitOTP.__conversion_factor 
+        # if too much time has passed since OTP was generated, OTP is no 
+        # longer valid
+        elif ((time() - self.__start) / TimedOTP.__conversion_factor 
             >= self.__time_limit):
             return False
         
-        return super().verify(otp)
+        return self.__otp.verify(otp)
