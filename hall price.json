@@ -259,7 +259,7 @@
       "Price": 315
     }
   ],
-  "Crescent": [
+  "17": [
     {
       "Size": "Single",
       "Air-conditioned": true,
@@ -285,7 +285,7 @@
       "Price": 300
     }
   ],
-  "Pioneer": [
+  "18": [
     {
       "Size": "Single",
       "Air-conditioned": true,
@@ -311,7 +311,7 @@
       "Price": 300
     }
   ],
-  "Binjai": [
+  "19": [
     {
       "Size": "Single",
       "Air-conditioned": true,
@@ -337,7 +337,7 @@
       "Price": 305
     }
   ],
-  "Tanjong": [
+  "20": [
     {
       "Size": "Single",
       "Air-conditioned": true,
@@ -363,7 +363,7 @@
       "Price": 305
     }
   ],
-  "Banyan": [
+  "21": [
     {
       "Size": "Single",
       "Air-conditioned": true,
@@ -389,7 +389,7 @@
       "Price": 305
     }
   ],
-  "Saraca": [
+  "22": [
     {
       "Size": "Single",
       "Air-conditioned": false,
@@ -439,7 +439,7 @@
       "Price": 340
     }
   ],
-  "Tamarind": [
+  "23": [
     {
       "Size": "Single",
       "Air-conditioned": false,
