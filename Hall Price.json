@@ -1,0 +1,542 @@
+[
+  {
+    "Halls": [
+      {
+        "Hall Number": 1,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 390
+            }
+          },
+          {
+            "Double": {
+              "Price": 265
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 2,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 390
+            }
+          },
+          {
+            "Double": {
+              "Price": 265
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 3,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 425
+            }
+          },
+          {
+            "Double": {
+              "Price": 315
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 4,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 430
+            }
+          },
+          {
+            "Double": {
+              "Price": 325
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 5,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 430
+            }
+          },
+          {
+            "Double": {
+              "Price": 325
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 6,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 400
+            }
+          },
+          {
+            "Double": {
+              "Price": 285
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 7,
+        "Room Types": [
+          {
+            "Single": [
+              {
+                "Air-conditioned": true,
+                "Price": 455
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 415
+              }
+            ]
+          },
+          {
+            "Single, Own Toilet": [
+              {
+                "Air-conditioned": true,
+                "Price": 605
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 525
+              }
+            ]
+          },
+          {
+            "Single Plus-sized": [
+              {
+                "Air-conditioned": true,
+                "Price": 465
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 430
+              }
+            ]
+          },
+          {
+            "Double": [
+              {
+                "Air-conditioned": true,
+                "Price": 340
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 300
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Hall Number": 8,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 390
+            }
+          },
+          {
+            "Double": {
+              "Price": 265
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 9,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 415
+            }
+          },
+          {
+            "Double": {
+              "Price": 305
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 10,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 415
+            }
+          },
+          {
+            "Double": {
+              "Price": 305
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 11,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 415
+            }
+          },
+          {
+            "Double": {
+              "Price": 305
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 12,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 415
+            }
+          },
+          {
+            "Double": {
+              "Price": 305
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 13,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 415
+            }
+          },
+          {
+            "Double": {
+              "Price": 305
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 14,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 415
+            }
+          },
+          {
+            "Double": {
+              "Price": 305
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 15,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 415
+            }
+          },
+          {
+            "Double": {
+              "Price": 305
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 16,
+        "Room Types": [
+          {
+            "Single": {
+              "Price": 425
+            }
+          },
+          {
+            "Double": {
+              "Price": 315
+            }
+          }
+        ]
+      },
+      {
+        "Hall Number": 17,
+        "Hall Name": "Crescent",
+        "Room Types": [
+          {
+            "Single": [
+              {
+                "Air-conditioned": true,
+                "Price": 455
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 415
+              }
+            ]
+          },
+          {
+            "Double": [
+              {
+                "Air-conditioned": true,
+                "Price": 340
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 300
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Hall Number": 18,
+        "Hall Name": "Pioneer",
+        "Room Types": [
+          {
+            "Single": [
+              {
+                "Air-conditioned": true,
+                "Price": 455
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 415
+              }
+            ]
+          },
+          {
+            "Double": [
+              {
+                "Air-conditioned": true,
+                "Price": 340
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 300
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Hall Number": 19,
+        "Hall Name": "Binjai",
+        "Room Types": [
+          {
+            "Single": [
+              {
+                "Air-conditioned": true,
+                "Price": 455
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 420
+              }
+            ]
+          },
+          {
+            "Double": [
+              {
+                "Air-conditioned": true,
+                "Price": 340
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 305
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Hall Number": 20,
+        "Hall Name": "Tanjong",
+        "Room Types": [
+          {
+            "Single": [
+              {
+                "Air-conditioned": true,
+                "Price": 455
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 415
+              }
+            ]
+          },
+          {
+            "Double": [
+              {
+                "Air-conditioned": true,
+                "Price": 340
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 300
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Hall Number": 21,
+        "Hall Name": "Banyan",
+        "Room Types": [
+          {
+            "Single": [
+              {
+                "Air-conditioned": true,
+                "Price": 455
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 415
+              }
+            ]
+          },
+          {
+            "Double": [
+              {
+                "Air-conditioned": true,
+                "Price": 340
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 300
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Hall Number": 22,
+        "Hall Name": "Saraca",
+        "Room Types": [
+          {
+            "Single": [
+              {
+                "Air-conditioned": true,
+                "Price": 455
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 415
+              }
+            ]
+          },
+          {
+            "Single, Own Toilet": [
+              {
+                "Air-conditioned": true,
+                "Price": 605
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 525
+              }
+            ]
+          },
+          {
+            "Single Plus-sized": [
+              {
+                "Air-conditioned": true,
+                "Price": 465
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 430
+              }
+            ]
+          },
+          {
+            "Double": [
+              {
+                "Air-conditioned": true,
+                "Price": 340
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 300
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Hall Number": 23,
+        "Hall Name": "Tamarind",
+        "Room Types": [
+          {
+            "Single": [
+              {
+                "Air-conditioned": true,
+                "Price": 455
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 415
+              }
+            ]
+          },
+          {
+            "Single, Own Toilet": [
+              {
+                "Air-conditioned": true,
+                "Price": 605
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 525
+              }
+            ]
+          },
+          {
+            "Single Plus-sized": [
+              {
+                "Air-conditioned": true,
+                "Price": 465
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 430
+              }
+            ]
+          },
+          {
+            "Double": [
+              {
+                "Air-conditioned": true,
+                "Price": 340
+              },
+              {
+                "Air-conditioned": false,
+                "Price": 300
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
