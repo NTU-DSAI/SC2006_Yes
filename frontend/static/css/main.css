@@ -1,1 +1,37 @@
-zhexun is a fish too
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family:'Roboto';
+}
+
+.dev-bar {
+    background-color: #282A35;
+    
+    width: 100vw; 
+    display: flex;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.dev-button {
+    color: #FFFFFF;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    text-align: center;
+    text-decoration: none; 
+    font-family:'Roboto';
+    font-size: 20px;
+}
+
+.dev-button:hover {
+    background-color: #000000;
+}

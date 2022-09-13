@@ -9,6 +9,21 @@
     {% endblock %} 
 </head>
 <body>
+
+    <!-- Dev tool bar -->
+    <div class="dev-bar">
+        <a class="dev-button" href="{{ url_for('admin') }}"> ADMIN </a>
+        <a class="dev-button" href="{{ url_for('information') }}"> INFORMATION </a>
+        <a class="dev-button" href="{{ url_for('landing') }}"> LANDING </a>
+        <a class="dev-button" href="{{ url_for('location') }}"> LOCATION </a>
+        <a class="dev-button" href="{{ url_for('login') }}"> LOGIN </a>
+        <a class="dev-button" href="{{ url_for('recommend') }}"> RECOMMEND </a>
+        <a class="dev-button" href="{{ url_for('route') }}"> ROUTE </a>
+        <a class="dev-button" href="{{ url_for('selection') }}"> SELECTION </a>
+        <a class="dev-button" href="{{ url_for('suggestion') }}"> SUGGESTION </a>
+    </div>
+    <!-- Remove before submission -->
+
     {% block body %}
     {% endblock %}
 </body>
