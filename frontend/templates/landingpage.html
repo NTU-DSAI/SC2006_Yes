@@ -1,24 +1,29 @@
 {% extends 'base.html' %}
 
 {% block head %} 
+<link rel='stylesheet' href="{{ url_for('static', filename='css/landing.css') }}">
 {% endblock %} 
 
 {% block body %} 
 <!-- Body of the web page goes here! -->
-<div>
-    <h1>EWasteGoWhere</h1>
+<div class="landing-body">
+    <h1 class="landing-title">EWasteGoWhere</h1>
 
-    <div>
-        <p>Welcome to EWasteGoWhere!</p>
-        <p>I'm Bob and I will be helping you navigate this website</p>
+    <div class='landing-box'>
+        <p class='paragraph-line'>Welcome to EWasteGoWhere!</p>
+        <p class='paragraph-line'>I'm Bob and I will be helping you navigate this website!</p>
 
-        <div>
-            <a href="{{ url_for('information') }}">Learn more</a>
-            <img src="{{ url_for('static', filename='images/bob.png') }}">
+        <div class="standard-button-background", id='information-button-background'>
+            <a class="standard-button" href="{{ url_for('information') }}">Learn more</a>
         </div>
+        
+        <img src="{{ url_for('static', filename='images/bob.png') }}" id="landing-bob">
     </div>
 
-    <a href="{{ url_for('selection') }}">Start recycling →</a>
-
+    <div id='start-recycling-adjuster'>
+        <div class="standard-button-background">
+            <a class="standard-button" href="{{ url_for('selection') }}">Start recycling →</a>
+        </div>
+    </div>
 </div>
 {% endblock %}
