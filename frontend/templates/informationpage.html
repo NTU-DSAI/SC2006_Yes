@@ -1,9 +1,26 @@
 {% extends 'base.html' %}
 
 {% block head %} 
+<link rel='stylesheet' href="{{ url_for('static', filename='css/information.css') }}">
 {% endblock %} 
 
 {% block body %} 
 <!-- Body of the web page goes here! -->
-<p>This is the information page.</p>
+<div>
+    <div class='title-adjuster'>
+        <h1 class='title'>EWasteGoWhere</h1>
+    </div>
+
+    <div class='box'>
+        <img src="{{ url_for('static', filename='images/information.png') }}" id="information-image">
+
+        <div id='start-recycling-adjuster'>
+            <div class="standard-button-background">
+                <a class="standard-button" href="{{ url_for('selection') }}">Start recycling →</a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
 {% endblock %}

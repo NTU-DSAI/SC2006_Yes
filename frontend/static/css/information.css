@@ -1,0 +1,21 @@
+.box {
+    width: max-content;
+    margin: auto;
+}
+
+#start-recycling-adjuster {
+    width: fit-content;
+    margin: auto;
+
+    margin-top: 40px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#information-image {
+    display: block;
+
+    width: 1071px;
+    height: 664px;
+}
