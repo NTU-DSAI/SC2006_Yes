@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -36,11 +36,28 @@ def route():
 
 @app.route('/selection')
 def selection():
-   return render_template("selectionpage.html")
+
+   ICTEquipment = ['Printer', "Laptop", "Mobile phone", "Router", "Tablet"]
+   BlubsNLamps = ["Blub", "Long LED tube"]
+   Batteries = ['A' * i for i in range(2, 5)]
+
+   return render_template(
+      "selectionpage.html", 
+      ICTEquipment_name = ICTEquipment, 
+      BlubsNLamps_name = BlubsNLamps, 
+      Batteries_name = Batteries)
 
 @app.route('/suggestion')
 def suggestion():
    return render_template("suggestionpage.html")
   
+@app.route('/selection', methods = ['POST'])
+def selection_screen_submit():
+   if request.method == 'POST':
+      print('POST')
+   else:
+      print('GET')
+   return redirect(url_for('location'))
+
 if __name__ == "__main__":
   app.run(debug = True)

@@ -1,14 +1,99 @@
 {% extends 'base.html' %}
 
 {% block head %} 
+<link rel='stylesheet' href="{{ url_for('static', filename='css/selection.css') }}">
 {% endblock %} 
 
 {% block body %} 
 <!-- Body of the web page goes here! -->
-<p>This is the selection page.</p>
 <div>
     <div class='title-adjuster'>
         <h1 class='title'>EWasteGoWhere</h1>
+        <div class='white-box'>
+            <p class='bob-words'>Select the types of E-waste <br> you want to recycle!</p>
+            <img src=" {{ url_for('static', filename='images/bob.png') }} " class='bob'>
+        </div>
     </div>
+
+    <form action='{{ url_for('selection') }}' method='post'>
+        <div class='form-box'>
+        <div class='selection-box-container'>
+            <!-- ICT EQUIPMENT -->
+            <div class='selection-container'>
+                <div class='selection-container-inner'>
+                    <div class='selection-image-box'>
+                        <img src=" {{ url_for('static', filename='images/printer.png') }} " class='image'>
+                    </div>
+
+                    <div class='selection-box'>
+                        <h2 class='selection-title'>ICT Equipment</h2>
+                        {% for i in range(ICTEquipment_name|length) %}
+                        <div class='selection-row'>
+                            <p class='radio-label'>{{ ICTEquipment_name[i] }}</p>
+                            <input class='radio-button' type='checkbox' name='ICTEquipment' id='{{ ICTEquipment_name[i] }}' value='{{ ICTEquipment_name[i] }}'>
+                            <label for='{{ ICTEquipment_name[i] }}'></label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLUBS & LAMPS -->
+            <div class='selection-container'>
+                <div class='selection-container-inner'>
+                    <div class='selection-image-box'>
+                        <img src=" {{ url_for('static', filename='images/light_blub.png') }} " class='image'>
+                    </div>
+
+                    <div class='selection-box'>
+                        <h2 class='selection-title'>Blubs &amp; Lamps</h2>
+                        {% for i in range(BlubsNLamps_name|length) %}
+                        <div class='selection-row'>
+                            <p class='radio-label'>{{ BlubsNLamps_name[i] }}</p>
+                            <input class='radio-button' type='checkbox' name='BlubsNLamps' id='{{ BlubsNLamps_name[i] }}' value='{{ BlubsNLamps_name[i] }}'>
+                        </div>
+                        <div class='selection-row'>
+                            <input class='slider' type="range" min="0" max="100" value="50" id=" {{ BlubsNLamps_name[i] }} Slider" 
+                            oninput="this.nextElementSibling.firstElementChild.value = this.value">
+                            <div class='slider-result'>
+                                <output id = 'slider-{{ i }}'>50</output>
+                                <p class='slider-units'>mm</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batteries -->
+            <div class='selection-container'>
+                <div class='selection-container-inner'>
+                    <div class='selection-image-box'>
+                    <img src=" {{ url_for('static', filename='images/battery.png') }} " class='image'>
+                    </div>
+
+                    <div class='selection-box'>
+                        <h2 class='selection-title'>Batteries</h2>
+                        {% for i in range(Batteries_name|length) %}
+                        <div class='selection-row'>
+                            <p class='radio-label'>{{ Batteries_name[i] }}</p>
+                            <input class='radio-button' type='checkbox' name='Batteries' id='{{ Batteries_name[i] }}' value='{{ Batteries_name[i] }}'>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='form-bottom'>
+        <div class='standard-button-background'>
+            <input type="submit" value="Next step →" class='standard-button'> 
+        </div>
+        <div class='suggestion-link'>
+            <a id='suggestion-link' href='{{ url_for('suggestion') }}'>Can't find something?<br>Suggest your E-waste here!</a>
+        </div>
+    </div>
+    </form>
 </div>
 {% endblock %}

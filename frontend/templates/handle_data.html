@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/dev.css') }}">
+</head>
+<body>
+    <div class="dev-bar">
+        <a class="dev-button" href="{{ url_for('admin') }}"> ADMIN </a>
+        <a class="dev-button" href="{{ url_for('information') }}"> INFORMATION </a>
+        <a class="dev-button" href="{{ url_for('landing') }}"> LANDING </a>
+        <a class="dev-button" href="{{ url_for('location') }}"> LOCATION </a>
+        <a class="dev-button" href="{{ url_for('login') }}"> LOGIN </a>
+        <a class="dev-button" href="{{ url_for('recommend') }}"> RECOMMEND </a>
+        <a class="dev-button" href="{{ url_for('route') }}"> ROUTE </a>
+        <a class="dev-button" href="{{ url_for('selection') }}"> SELECTION </a>
+        <a class="dev-button" href="{{ url_for('suggestion') }}"> SUGGESTION </a>
+    </div>
+</body>
+</html>
