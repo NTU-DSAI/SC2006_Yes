@@ -139,7 +139,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .slider {
     float: left;
-    width: 70%;
+    width: 60%;
     position: relative;
     top: 5px;
 }

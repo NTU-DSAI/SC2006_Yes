@@ -55,8 +55,7 @@ def suggestion():
 def selection_screen_submit():
    if request.method == 'POST':
       print('POST')
-   else:
-      print('GET')
+      
    return redirect(url_for('location'))
 
 if __name__ == "__main__":
