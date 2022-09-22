@@ -19,7 +19,7 @@
             <div class='search-bar-box'>
                 <div class='search-bar'>
                     <form action='{{ url_for("location") }}/using_address' method='POST'>
-                        <input class='search-bar-text' type='text' name='address' id='address_bar' value='Enter your location'>
+                        <input class='search-bar-text' type='text' name='address' id='address_bar' placeholder='Enter your location'>
                         <input class='search-bar-submit' type='image' src='{{ url_for("static", filename="images/submit.png") }}' alt='Submit'>
                     </form>
                 </div>
