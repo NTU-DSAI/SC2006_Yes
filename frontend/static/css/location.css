@@ -1,0 +1,80 @@
+.map-box {
+    position: relative;
+    width: 1200px;
+    height: 640px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.map {
+    position: absolute;
+    z-index: 1;
+}
+
+.map-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+
+    width: 1200px;
+    height: 640px;
+}
+
+.search-bar-box {
+    display: flex;
+    padding-top: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    background-color: #FFFFFF;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    width: 60%;
+    height: 30px;
+    padding: 5px;
+    z-index: 2;
+}
+
+.search-bar-text {
+    border: none;
+    width: 95%;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+.search-bar-submit {
+    background-color: #FFFFFF; 
+    width: 5%;
+    border: none;
+    float: right;
+}
+
+.gps-box{
+    z-index: 2;
+    position: relative;
+    padding-top: 1%;
+    width: fit-content;
+    margin: auto;
+}
+
+.gps-icon {
+    background-color: transparent;
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    padding-right: 10px;
+}
+
+.bob-box {
+    position: relative;
+    padding-top: 20%;
+    width: fit-content;
+    margin: auto;
+    z-index: 2;
+}

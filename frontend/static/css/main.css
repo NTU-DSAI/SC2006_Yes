@@ -23,12 +23,12 @@ h1, h2, h3, h4, h5, h6, p, a {
 .title {
     color: #1B8800;
     font-style: italic;
-    font-size: 67px;
+    font-size: 50px;
+    vertical-align: top;
 }
 
 .title-adjuster {
     padding-left: 40px;
-    margin: 0;
 }
 
 .base-body {
@@ -39,27 +39,34 @@ h1, h2, h3, h4, h5, h6, p, a {
     align-items: center;
 }
 
+/* BUTTON FORMATING*/
+
 .standard-button-background {
     background-color: #1B8800;
     display: inline-flex;
 
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: fit-content;
+    height: fit-content;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.standard-button {
-    color: #FFFFFFFF;
+.standard-button-link {
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
     text-decoration: none;
     font-weight: bold;
-    font-size: 43px;
+    font-size: 32px;
 }
 
-.paragraph-line {
+.text {
     margin: 0;
     padding: 0;
     border: 0;
 
-    font-size: 27px;
+    font-size: 20px;
 }

@@ -1,0 +1,22 @@
+.bob-white-box {
+    background-color: #FFFFFF;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.bob {
+    float: left;
+    width: 120px;
+    height: 130px;
+    padding-left: 20px;
+}
+
+.bob-words {
+    height: auto;
+    margin: auto;
+}

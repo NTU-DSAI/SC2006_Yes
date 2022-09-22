@@ -18,9 +18,29 @@ def information():
 def landing():
    return render_template("landingpage.html")
 
+# -------------  LOCATION PAGE  -------------
+
+@app.route('/location/using_address', methods = ['POST'])
+def update_using_address():
+
+   # lat, long = pull from backend
+   lat, long = 1.34463493822005, 103.680705586564
+
+   return render_template("locationpage.html", lat = lat, long = long, zoom = 15)
+
+@app.route('/location/using_gps')
+def update_using_gps():
+
+   # lat, long = pull from gps
+   lat, long = 1.2966, 103.7764
+
+   return render_template("locationpage.html", lat = lat, long = long, zoom = 15)
+
 @app.route('/location')
 def location():
-   return render_template("locationpage.html")
+   return render_template("locationpage.html", lat = 1.3521, long = 103.8198, zoom = 12)
+
+
 
 @app.route('/login')
 def login():
@@ -34,9 +54,12 @@ def recommend():
 def route():
    return render_template("routepage.html")
 
+# -------------  SELECTION PAGE  -------------
+
 @app.route('/selection')
 def selection():
 
+   # update to pull from backend
    ICTEquipment = ['Printer', "Laptop", "Mobile phone", "Router", "Tablet"]
    BlubsNLamps = ["Blub", "Long LED tube"]
    Batteries = ['A' * i for i in range(2, 5)]
@@ -47,16 +70,16 @@ def selection():
       BlubsNLamps_name = BlubsNLamps, 
       Batteries_name = Batteries)
 
-@app.route('/suggestion')
-def suggestion():
-   return render_template("suggestionpage.html")
-  
 @app.route('/selection', methods = ['POST'])
 def selection_screen_submit():
    if request.method == 'POST':
       print('POST')
       
    return redirect(url_for('location'))
+
+@app.route('/suggestion')
+def suggestion():
+   return render_template("suggestionpage.html")
 
 if __name__ == "__main__":
   app.run(debug = True)

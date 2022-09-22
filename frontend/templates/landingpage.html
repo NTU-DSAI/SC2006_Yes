@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %} 
+<link rel='stylesheet' href="{{ url_for('static', filename='css/bob.css') }}">
 <link rel='stylesheet' href="{{ url_for('static', filename='css/landing.css') }}">
 {% endblock %} 
 
@@ -9,20 +10,22 @@
 <div class="landing-body">
     <h1 class="title">EWasteGoWhere</h1>
 
-    <div class='landing-box'>
-        <p class='paragraph-line'>Welcome to EWasteGoWhere!</p>
-        <p class='paragraph-line'>I'm Bob and I will be helping you navigate this website!</p>
+    <div class='upper-box'>
+    
+        <p class='text'>Welcome to EWasteGoWhere!</p>
+        <p class='text'>I'm Bob and I will be helping you navigate this website!</p>
 
-        <div class="standard-button-background", id='information-button-background'>
-            <a class="standard-button" href="{{ url_for('information') }}">Learn more</a>
+        <div class="standard-button-background information-button">
+            <a class="standard-button-link" href="{{ url_for('information') }}">Learn more</a>
         </div>
-        
-        <img src="{{ url_for('static', filename='images/bob.png') }}" id="landing-bob">
+                
+        <img src="{{ url_for('static', filename='images/bob.png') }}" class='bob'>
+
     </div>
 
-    <div id='start-recycling-adjuster'>
+    <div class='lower-box'>
         <div class="standard-button-background">
-            <a class="standard-button" href="{{ url_for('selection') }}">Start recycling →</a>
+            <a class="standard-button-link recycling-button" href="{{ url_for('selection') }}">Start recycling →</a>
         </div>
     </div>
 </div>
