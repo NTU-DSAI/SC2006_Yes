@@ -1,0 +1,36 @@
+.white-box-adjustor {
+    display: flex;
+    justify-content: center;
+    margin: 10vh;
+}
+
+.bob-white-box {
+    position: relative;
+    width: 450px;
+    height: 300px;
+    padding: 50px;
+}
+
+.bob-words {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.bob-alt {
+    position: absolute;
+    right: 50px;
+    bottom: 150px;
+}
+
+.left-button, .right-button {
+    position: absolute;
+    bottom: 50px;
+}
+.left-button {
+    left: 50px;
+}
+.right-button {
+    right: 50px;
+}
+

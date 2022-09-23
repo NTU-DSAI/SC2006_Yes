@@ -81,5 +81,9 @@ def selection_screen_submit():
 def suggestion():
    return render_template("suggestionpage.html")
 
+@app.route('/suggestion/completed')
+def suggestion_completed():
+   return render_template('suggestion_completed.html')
+   
 if __name__ == "__main__":
   app.run(debug = True)

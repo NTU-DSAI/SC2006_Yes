@@ -16,6 +16,12 @@
     padding-left: 20px;
 }
 
+.bob-alt {
+    height: 170px;
+    width: 170px;
+    float: none;
+}
+
 .bob-words {
     height: auto;
     margin: auto;

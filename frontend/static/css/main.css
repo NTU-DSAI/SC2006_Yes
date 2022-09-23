@@ -52,6 +52,16 @@ h1, h2, h3, h4, h5, h6, p, a {
     padding-right: 30px;
     padding-top: 15px;
     padding-bottom: 15px;
+    border-radius: 8px;
+}
+
+.longer-button-background {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.alt-background-color{
+    background-color: #535353;
 }
 
 .standard-button-link {
