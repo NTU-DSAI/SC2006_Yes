@@ -24,17 +24,16 @@ def landing():
 def update_using_address():
 
    # lat, long = pull from backend
+   address='NTU'
    lat, long = 1.34463493822005, 103.680705586564
-
-   return render_template("locationpage.html", lat = lat, long = long, zoom = 15)
+   return render_template("locationselectedpage.html", lat = lat, long = long, zoom = 15, address=address)
 
 @app.route('/location/using_gps')
 def update_using_gps():
 
    # lat, long = pull from gps
    lat, long = 1.2966, 103.7764
-
-   return render_template("locationpage.html", lat = lat, long = long, zoom = 15)
+   return render_template("locationselectedpage.html", lat = lat, long = long, zoom = 15, address='')
 
 @app.route('/location')
 def location():
